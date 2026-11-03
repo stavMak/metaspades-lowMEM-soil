@@ -1,6 +1,8 @@
-# soil-metagenome-assembly
+# metaspades-lowMEM-soil
 
-Bash pipeline for **hybrid metagenomic assembly of soil samples** with Illumina paired-end reads and PacBio long reads, built around **metaSPAdes** and designed to fit high-complexity soil data on a single server with ~250 GB RAM.
+**Memory-efficient hybrid metaSPAdes assembly of soil metagenomes (Illumina + PacBio) on a single ~250 GB RAM server.**
+
+Soil is one of the most complex metagenomes, and metaSPAdes often needs far more memory than a typical server has. This Bash pipeline reduces the number of distinct k-mers *before* assembly, so a ~39 Gbp soil sample assembles with metaSPAdes in ~190 GB RAM peak.
 
 ```
 Illumina R1/R2 ──► fastp ──► tadpole ──► bbnorm ──► metaSPAdes (hybrid) ──► contigs / scaffolds
@@ -21,6 +23,8 @@ Soil metagenomes contain billions of distinct k-mers, and metaSPAdes needs memor
 ## Installation
 
 ```bash
+git clone https://github.com/stavMak/metaspades-lowMEM-soil.git
+cd metaspades-lowMEM-soil
 mamba env create -f environment.yml     # or: conda env create -f environment.yml
 conda activate soil_asm
 ```
