@@ -1,0 +1,10 @@
+name: soil_asm
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastp=1.4.0
+  - bbmap=40.05
+  - spades=4.3.0
+  # Optional: HiFi-only assembly (used with -L hifi)
+  # - metamdbg

@@ -1,0 +1,26 @@
+# Sequencing data
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.fasta
+*.fa
+*.fna
+*.fasta.gz
+*.fa.gz
+*.bam
+*.sam
+
+# Pipeline outputs and logs
+soil_assembly/
+batch/
+tmp/
+*.out
+*.log
+
+# Spreadsheets / local results
+*.xlsx
+
+# OS / editor
+.DS_Store
+*.swp
